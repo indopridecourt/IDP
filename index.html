@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Layanan Pengadilan Negeri Indopride</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen p-4 sm:p-8 font-sans">
 
@@ -120,39 +121,27 @@
         </div>
 
     </div>
-function aksesInternal(urlTujuan) {
-    // Buka tab kosong dulu saat tombol diklik agar tidak diblokir browser
-    const tabBaru = window.open('about:blank', '_blank');
-
-    let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
-    
-    while (pinInput !== null && pinInput !== PIN_INTERNAL) {
-        alert("❌ PIN Salah! Silakan coba lagi.");
-        pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
-    }
-
-    if (pinInput === PIN_INTERNAL) {
-        tabBaru.location.href = urlTujuan; // Arahkan tab baru ke URL tujuan
-    } else {
-        tabBaru.close(); // Tutup tab jika dibatalkan/salah
-    }
-}
 <script>
     // PIN Akses Portal Utama
-    const PIN_INTERNAL = "1235";
+    const PIN_INTERNAL = "1235"; // Sesuaikan PIN di sini
 
     function aksesInternal(urlTujuan) {
+        // 1. Buka tab baru terlebih dahulu (mencegah blokir browser)
+        const tabBaru = window.open('about:blank', '_blank');
+
+        // 2. Minta input PIN dengan perulangan jika salah
         let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
         
-        // Perulangan jika PIN salah
         while (pinInput !== null && pinInput !== PIN_INTERNAL) {
             alert("❌ PIN Salah! Silakan coba lagi.");
             pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
         }
 
-        // Jika PIN benar, pindah halaman di tab yang sama
+        // 3. Verifikasi hasil PIN
         if (pinInput === PIN_INTERNAL) {
-            window.location.href = urlTujuan;
+            tabBaru.location.href = urlTujuan; // Alihkan tab baru ke halaman tujuan
+        } else {
+            tabBaru.close(); // Tutup kembali tab baru jika pengguna menekan Cancel
         }
     }
 </script>
