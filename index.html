@@ -120,25 +120,41 @@
         </div>
 
     </div>
+function aksesInternal(urlTujuan) {
+    // Buka tab kosong dulu saat tombol diklik agar tidak diblokir browser
+    const tabBaru = window.open('about:blank', '_blank');
 
+    let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
+    
+    while (pinInput !== null && pinInput !== PIN_INTERNAL) {
+        alert("❌ PIN Salah! Silakan coba lagi.");
+        pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
+    }
+
+    if (pinInput === PIN_INTERNAL) {
+        tabBaru.location.href = urlTujuan; // Arahkan tab baru ke URL tujuan
+    } else {
+        tabBaru.close(); // Tutup tab jika dibatalkan/salah
+    }
+}
 <script>
-        // PIN Akses Portal Utama
-        const PIN_INTERNAL = "1235";
+    // PIN Akses Portal Utama
+    const PIN_INTERNAL = "1234";
 
-        function aksesInternal(urlTujuan) {
-            let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
-            
-            // Perulangan jika PIN salah
-            while (pinInput !== null && pinInput !== PIN_INTERNAL) {
-                alert("❌ PIN Salah! Silakan coba lagi.");
-                pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
-            }
-
-            // Jika PIN benar
-            if (pinInput === PIN_INTERNAL) {
-                window.open(urlTujuan, '_blank');
-            }
+    function aksesInternal(urlTujuan) {
+        let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
+        
+        // Perulangan jika PIN salah
+        while (pinInput !== null && pinInput !== PIN_INTERNAL) {
+            alert("❌ PIN Salah! Silakan coba lagi.");
+            pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
         }
-    </script>
+
+        // Jika PIN benar, pindah halaman di tab yang sama
+        if (pinInput === PIN_INTERNAL) {
+            window.location.href = urlTujuan;
+        }
+    }
+</script>
 </body>
 </html>
