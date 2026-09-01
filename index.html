@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Layanan Pengadilan Negeri Indopride</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen p-4 sm:p-8 font-sans">
 
@@ -22,7 +21,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- 2. Web KTA Digital (INTERNAL - PIN) -->
-            <button onclick="aksesInternal('https://indopridecourt.github.io/kta-pengadilan/')" >Akses KTA</button>
+            <button onclick="bukaModalPin('https://indopridecourt.github.io/kta-pengadilan/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 bg-amber-950 border border-amber-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
@@ -39,7 +38,7 @@
             </button>
 
             <!-- 3. Web Lisensi Advokat (INTERNAL - PIN) -->
-            <button onclick="aksesInternal('https://indopridecourt.github.io/lisensi-advokat/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
+            <button onclick="bukaModalPin('https://indopridecourt.github.io/lisensi-advokat/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 bg-purple-950 border border-purple-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
@@ -72,30 +71,30 @@
                 </div>
             </a>
 
-     <!-- 5. Lowongan Kerja (PUBLIK) -->
-<div class="bg-slate-900/90 p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between shadow-lg hover:shadow-amber-500/10 group">
-    <div class="space-y-3">
-        <div class="flex justify-between items-start">
-            <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                💼
+            <!-- 5. Lowongan Kerja (PUBLIK) -->
+            <div class="bg-slate-900/90 p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between shadow-lg hover:shadow-amber-500/10 group">
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            💼
+                        </div>
+                        <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 animate-pulse">
+                            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span> DIBUKA
+                        </span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-100 group-hover:text-amber-400 transition-colors">Rekrutmen & Lowongan</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Penerimaan Anggota Perangkat Pengadilan Kota #Indopride.</p>
+                </div>
+                
+                <div class="mt-6">
+                    <a href="https://indopridecourt.github.io/Lowongan/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs py-2.5 px-4 rounded-xl transition-all shadow-md">
+                        <span>Lihat Informasi & Daftar</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 animate-pulse">
-                <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span> DIBUKA
-            </span>
-        </div>
-        <h3 class="text-lg font-bold text-slate-100 group-hover:text-amber-400 transition-colors">Rekrutmen & Lowongan</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Penerimaan Anggota Perangkat Pengadilan Kota #Indopride.</p>
-    </div>
-    
-    <div class="mt-6">
-        <a href="https://indopridecourt.github.io/Lowongan/" class="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs py-2.5 px-4 rounded-xl transition-all shadow-md">
-            <span>Lihat Informasi & Daftar</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-        </a>
-    </div>
-</div>
 
             <!-- 6. Pelayanan Pengadilan (PUBLIK) -->
             <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80 border-dashed flex flex-col justify-between">
@@ -121,29 +120,75 @@
         </div>
 
     </div>
-<script>
-    // PIN Akses Portal Utama
-    const PIN_INTERNAL = "1235"; // Sesuaikan PIN di sini
 
-    function aksesInternal(urlTujuan) {
-        // 1. Buka tab baru terlebih dahulu (mencegah blokir browser)
-        const tabBaru = window.open('about:blank', '_blank');
+    <!-- MODAL INPUT PIN (ANTI-BLOKIR BROWSER) -->
+    <div id="pinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/40 w-full max-w-sm rounded-2xl p-6 shadow-2xl text-center space-y-4">
+            <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-2xl mx-auto">
+                🔒
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-slate-100">Otentikasi Akses</h3>
+                <p class="text-xs text-slate-400 mt-1">Masukkan PIN Layanan Internal Pengadilan</p>
+            </div>
+            
+            <div>
+                <input type="password" id="modalPinInput" placeholder="Masukkan PIN..." 
+                       class="w-full bg-slate-950 border border-slate-700 focus:border-amber-500 rounded-xl px-4 py-3 text-center text-slate-100 text-lg tracking-widest outline-none transition-colors">
+                <p id="pinErrorMsg" class="text-red-400 text-xs mt-2 hidden">❌ PIN Salah! Silakan coba lagi.</p>
+            </div>
 
-        // 2. Minta input PIN dengan perulangan jika salah
-        let pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
-        
-        while (pinInput !== null && pinInput !== PIN_INTERNAL) {
-            alert("❌ PIN Salah! Silakan coba lagi.");
-            pinInput = prompt("🔒 [AKSES INTERNAL]\nMasukkan PIN Otentikasi Petugas/Pengadilan:");
+            <div class="flex gap-2">
+                <button onclick="tutupModalPin()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs py-3 rounded-xl transition-colors">
+                    Batal
+                </button>
+                <button onclick="prosesVerifikasiPin()" class="w-1/2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs py-3 rounded-xl transition-colors">
+                    Masuk
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const PIN_INTERNAL = "1235"; // PIN Akses Portal Utama
+        let targetUrlPin = "";
+
+        // Fungsi membuka modal
+        function bukaModalPin(urlTujuan) {
+            targetUrlPin = urlTujuan;
+            document.getElementById('modalPinInput').value = '';
+            document.getElementById('pinErrorMsg').classList.add('hidden');
+            document.getElementById('pinModal').classList.remove('hidden');
+            document.getElementById('modalPinInput').focus();
         }
 
-        // 3. Verifikasi hasil PIN
-        if (pinInput === PIN_INTERNAL) {
-            tabBaru.location.href = urlTujuan; // Alihkan tab baru ke halaman tujuan
-        } else {
-            tabBaru.close(); // Tutup kembali tab baru jika pengguna menekan Cancel
+        // Fungsi menutup modal
+        function tutupModalPin() {
+            document.getElementById('pinModal').classList.add('hidden');
+            targetUrlPin = "";
         }
-    }
-</script>
+
+        // Eksekusi buka tab baru begitu PIN valid & tombol diklik
+        function prosesVerifikasiPin() {
+            const inputPin = document.getElementById('modalPinInput').value;
+
+            if (inputPin === PIN_INTERNAL) {
+                document.getElementById('pinModal').classList.add('hidden');
+                // Eksekusi langsung via event tombol user -> Tab baru tidak akan diblokir
+                window.open(targetUrlPin, '_blank');
+            } else {
+                document.getElementById('pinErrorMsg').classList.remove('hidden');
+                document.getElementById('modalPinInput').value = '';
+                document.getElementById('modalPinInput').focus();
+            }
+        }
+
+        // Jalankan verifikasi jika menekan Enter
+        document.getElementById('modalPinInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                prosesVerifikasiPin();
+            }
+        });
+    </script>
 </body>
 </html>
