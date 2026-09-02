@@ -20,7 +20,7 @@
         <!-- Grid Cards Menu Layanan -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- 2. Web KTA Digital (INTERNAL - PIN) -->
+            <!-- 1. Web KTA Digital (INTERNAL - PIN) -->
             <button onclick="bukaModalPin('https://indopridecourt.github.io/kta-pengadilan/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
@@ -37,24 +37,24 @@
                 </div>
             </button>
 
-            <!-- 3. Web Lisensi Advokat (INTERNAL - PIN) -->
-            <button onclick="bukaModalPin('https://indopridecourt.github.io/lisensi-advokat/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
+            <!-- 2. Web Lisensi Advokat (PUBLIK & INTERNAL - TANPA PIN PORTAL) -->
+            <a href="https://indopridecourt.github.io/lisensi-advokat/" target="_blank" class="group bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 bg-purple-950 border border-purple-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
                             ⚖️
                         </div>
-                        <span class="bg-rose-950/80 text-rose-400 border border-rose-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🔒 Khusus Internal</span>
+                        <span class="bg-purple-950/80 text-purple-400 border border-purple-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🌐 Publik & Internal</span>
                     </div>
                     <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Lisensi & Izin Advokat</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Pembuatan Lisensi Advokad.</p>
+                    <p class="text-xs text-slate-400 leading-relaxed">Persyaratan berkas, kuis kelayakan etika, & layanan penerbitan KTA Advokat.</p>
                 </div>
                 <div class="mt-6 flex items-center text-xs font-bold text-purple-400 group-hover:translate-x-1 transition">
-                    Akses Layanan &rarr;
+                    Buka Layanan &rarr;
                 </div>
-            </button>
+            </a>
 
-            <!-- 4. Web Database UU (PUBLIK - TANPA PIN) -->
+            <!-- 3. Web Database UU (PUBLIK - TANPA PIN) -->
             <a href="https://indopridecourt.github.io/Undang-Undang/" target="_blank" class="group bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
@@ -71,7 +71,7 @@
                 </div>
             </a>
 
-            <!-- 5. Lowongan Kerja (PUBLIK) -->
+            <!-- 4. Lowongan Kerja (PUBLIK) -->
             <div class="bg-slate-900/90 p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between shadow-lg hover:shadow-amber-500/10 group">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <!-- 6. Pelayanan Pengadilan (PUBLIK) -->
+            <!-- 5. Pelayanan Pengadilan (PUBLIK) -->
             <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80 border-dashed flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
@@ -150,10 +150,9 @@
     </div>
 
     <script>
-        const PIN_INTERNAL = "1235"; // PIN Akses Portal Utama
+        const PIN_INTERNAL = "1235"; // PIN Akses Portal Utama (KTA Pengadilan)
         let targetUrlPin = "";
 
-        // Fungsi membuka modal
         function bukaModalPin(urlTujuan) {
             targetUrlPin = urlTujuan;
             document.getElementById('modalPinInput').value = '';
@@ -162,19 +161,16 @@
             document.getElementById('modalPinInput').focus();
         }
 
-        // Fungsi menutup modal
         function tutupModalPin() {
             document.getElementById('pinModal').classList.add('hidden');
             targetUrlPin = "";
         }
 
-        // Eksekusi buka tab baru begitu PIN valid & tombol diklik
         function prosesVerifikasiPin() {
             const inputPin = document.getElementById('modalPinInput').value;
 
             if (inputPin === PIN_INTERNAL) {
                 document.getElementById('pinModal').classList.add('hidden');
-                // Eksekusi langsung via event tombol user -> Tab baru tidak akan diblokir
                 window.open(targetUrlPin, '_blank');
             } else {
                 document.getElementById('pinErrorMsg').classList.remove('hidden');
@@ -183,7 +179,6 @@
             }
         }
 
-        // Jalankan verifikasi jika menekan Enter
         document.getElementById('modalPinInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 prosesVerifikasiPin();
