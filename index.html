@@ -20,46 +20,29 @@
         <!-- Grid Cards Menu Layanan -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- 1. Web KTA Digital (INTERNAL - PIN) -->
-            <button onclick="bukaModalPin('https://indopridecourt.github.io/kta-pengadilan/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
+            <!-- 1. Informasi Pelayanan (PUBLIK) -->
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80 border-dashed flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 bg-amber-950 border border-amber-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
-                            🪪
+                        <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-2xl">
+                            🏛️
                         </div>
-                        <span class="bg-rose-950/80 text-rose-400 border border-rose-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🔒 Khusus Internal</span>
+                        <span class="bg-slate-800 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded">Segera Hadir</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Sistem KTA Digital</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Pembuatan Kartu Tanda Anggota Perangkat Pengadilan.</p>
+                    <h3 class="text-lg font-bold text-slate-300">Informasi Pelayanan</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Panduan alur pendaftaran perkara, tata cara permohonan akta, dan konsultasi.</p>
                 </div>
-                <div class="mt-6 flex items-center text-xs font-bold text-amber-400 group-hover:translate-x-1 transition">
-                    Akses Layanan &rarr;
+                <div class="mt-6 text-xs text-slate-500 italic">
+                    Tahap Pengembangan
                 </div>
-            </button>
+            </div>
 
-            <!-- 2. Web Lisensi Advokat (PUBLIK & INTERNAL - TANPA PIN PORTAL) -->
-            <a href="https://indopridecourt.github.io/lisensi-advokat/" target="_blank" class="group bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 bg-purple-950 border border-purple-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
-                            ⚖️
-                        </div>
-                        <span class="bg-purple-950/80 text-purple-400 border border-purple-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🌐 Publik & Internal</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Lisensi & Izin Advokat</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Persyaratan berkas, kuis kelayakan etika, & layanan penerbitan KTA Advokat.</p>
-                </div>
-                <div class="mt-6 flex items-center text-xs font-bold text-purple-400 group-hover:translate-x-1 transition">
-                    Buka Layanan &rarr;
-                </div>
-            </a>
-
-            <!-- 3. Web Database UU (PUBLIK - TANPA PIN) -->
+            <!-- 2. Database Peraturan & UU (PUBLIK) -->
             <a href="https://indopridecourt.github.io/Undang-Undang/" target="_blank" class="group bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 bg-emerald-950 border border-emerald-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
-                            📜
+                            📚
                         </div>
                         <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-800/80 text-[10px] font-bold px-2 py-0.5 rounded">🌐 Publik</span>
                     </div>
@@ -71,7 +54,7 @@
                 </div>
             </a>
 
-            <!-- 4. Lowongan Kerja (PUBLIK) -->
+            <!-- 3. Rekrutmen & Lowongan (PUBLIK) -->
             <div class="bg-slate-900/90 p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between shadow-lg hover:shadow-amber-500/10 group">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
@@ -96,22 +79,56 @@
                 </div>
             </div>
 
-            <!-- 5. Pelayanan Pengadilan (PUBLIK) -->
-            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80 border-dashed flex flex-col justify-between">
+            <!-- 4. Lisensi & Izin Advokat (PUBLIK & INTERNAL) -->
+            <a href="https://indopridecourt.github.io/lisensi-advokat/" target="_blank" class="group bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
                 <div class="space-y-3">
                     <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-2xl">
-                            🏛️
+                        <div class="w-12 h-12 bg-purple-950 border border-purple-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
+                            ⚖️
                         </div>
-                        <span class="bg-slate-800 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded">Segera Hadir</span>
+                        <span class="bg-purple-950/80 text-purple-400 border border-purple-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🌐 Publik & Internal</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-300">Informasi Pelayanan</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Panduan alur pendaftaran perkara, tata cara permohonan akta, dan konsultasi.</p>
+                    <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Lisensi & Izin Advokat</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Persyaratan berkas, kuis kelayakan etika, & layanan penerbitan KTA Advokat.</p>
                 </div>
-                <div class="mt-6 text-xs text-slate-500 italic">
-                    Tahap Pengembangan
+                <div class="mt-6 flex items-center text-xs font-bold text-purple-400 group-hover:translate-x-1 transition">
+                    Buka Layanan &rarr;
                 </div>
-            </div>
+            </a>
+
+            <!-- 5. Sistem KTA Digital (INTERNAL - PIN) -->
+            <button onclick="bukaModalPin('https://indopridecourt.github.io/kta-pengadilan/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 bg-amber-950 border border-amber-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
+                            🪪
+                        </div>
+                        <span class="bg-rose-950/80 text-rose-400 border border-rose-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🔒 Khusus Internal</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Sistem KTA Digital</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Pembuatan Kartu Tanda Anggota Perangkat Pengadilan.</p>
+                </div>
+                <div class="mt-6 flex items-center text-xs font-bold text-amber-400 group-hover:translate-x-1 transition">
+                    Akses Layanan &rarr;
+                </div>
+            </button>
+
+            <!-- 6. Pembuatan Akta Pengakuan (INTERNAL - PIN) -->
+            <button onclick="bukaModalPin('https://indopridecourt.github.io/aktapengakuan/')" class="group text-left bg-slate-900 hover:bg-slate-800/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-between w-full">
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 bg-blue-950 border border-blue-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition duration-300">
+                            📜
+                        </div>
+                        <span class="bg-rose-950/80 text-rose-400 border border-rose-800/80 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">🔒 Khusus Internal</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Pembuatan Akta Pengakuan</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Sistem administrasi register perdata dan penerbitan kutipan akta resmi.</p>
+                </div>
+                <div class="mt-6 flex items-center text-xs font-bold text-amber-400 group-hover:translate-x-1 transition">
+                    Akses Layanan &rarr;
+                </div>
+            </button>
 
         </div>
 
@@ -150,7 +167,7 @@
     </div>
 
     <script>
-        const PIN_INTERNAL = "1235"; // PIN Akses Portal Utama (KTA Pengadilan)
+        const PIN_INTERNAL = "1235"; // PIN Akses Portal Utama
         let targetUrlPin = "";
 
         function bukaModalPin(urlTujuan) {
